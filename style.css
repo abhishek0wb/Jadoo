@@ -8,62 +8,76 @@ html, body{
     height: 100%;
     background-color:  #ffffff;
 }
-.main{
+/* .main{
     display: flex;
     flex-direction: column;
+} */
+
+header{
+    height: 80px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 100px;
 }
 
-.navbar{
+.logo{
+    font-size: 33px;
+    color: #0f0e0e;
+    font-weight: 600;
+}
+
+nav ul{
     display: flex;
-    width: 100%;
-    height: 90px;
-    color: #ffffff00;
-    
-    /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19); */
-    /* background-color: rgb(132, 110, 110); */
+    list-style: none;
 }
-.navbar .items{
-    width: 60%;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    
+
+nav ul li{
+    margin: 0 20px;
+
 }
-.items ul{
-    float: right;
-    margin-right: 20px;
+
+nav ul li a{
+    color: rgb(2, 1, 1);
+    text-decoration: none;
+    font-size: 18px;
+    /* font-weight: 500; */
+    letter-spacing: 1px;
+    /* padding: 8px 10px; */
+    border-radius: 5px;
 }
-.a{
-    color: #212832;;
-    font-size: 12px;
+.menu i{
+   color: #0b0a0a;
+   /* text-align: left; */
+   margin-left: 50px;
+   font-size: 32px;
+   cursor: pointer;
+   display: none;
 }
-.navbar .title-nav{
-    width: 40%;
-    margin-left: 80px;
-    margin-top: 10px;
-    
+#onclick{
+    display: none;
 }
-.main{
-    display: flex;
-    /* flex-direction: column; */
-}
+
+
 
 .hero{
     display: flex;
+    flex-direction: row;
     width: 100%;
 }
 .hero-right{
-    /* background-color: blueviolet; */
-    /* border: 2px solid #6b1717; */
+    
     border-radius: 4px;
     height: 500px;
     width: 50%;
 }
 .img{
+    /* position: relative; */
     width: 100%;
 }
 .hero-left{
-    padding-left: 15px;
+    /* padding-left: 15px; */
     margin: 40px;
     width: 50%;
     height: 500px;
@@ -174,8 +188,11 @@ color: #14183e;
 }
 
 .box img{
+    position: absolute;
+    padding: 2px;
    width: auto;
    height: 90px;
+   margin-left: 80px;
    align-items: center;
    justify-content: center;
 }
@@ -208,13 +225,15 @@ color: #5e6282;
 
 .Destinations{
     display: flex;
-    justify-content: space-around;
+    flex-flow: row wrap;
+    justify-content: center;
     width: 100%;
     height: 100%;
     margin-bottom: 40px;
 }
 
 .container{
+    flex: 1;
        margin: 10px;
        width: 30%;
        height: 400px;
@@ -571,7 +590,7 @@ color: #ffffff;
 }
 .mail{
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     text-align: center;
 }
 .mail p{
@@ -585,4 +604,94 @@ font-style: normal;
 text-align: left;
 color: #5e6282;
 
+}
+
+
+
+@media (max-width: 900px){
+    .menu i{
+       display: block;
+   }
+   nav ul{
+       position: fixed;
+       top: 80px;
+       left: -100%;
+       background: #111;
+       height: 100vh;
+       width: 100%;
+       display: block;
+       text-align: center;
+       transition: all 0.3s ease;
+   }
+
+   #onclick:checked ~ ul{
+       left: 0%;
+   }
+   nav ul li{
+       margin: 40px 0;
+ }
+
+ .hero{
+    flex-direction: row;
+   }
+
+   .hero .hero-left{
+    width: 100%;
+   }
+
+   .hero .hero-right{
+    width: 100;
+   }
+  .hero-right .img{
+    display: none;
+  }
+   .services{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 800px;
+   }
+ .box{
+    width: 50%;
+    height: 200px;
+ }
+
+ .Destinations .container{
+     flex-basis: 40%;
+}
+.Destinations .container:last-child{
+       flex-basis: 100%;
+       margin: 0;
+}
+.Destinations .container:nth-last-child(2){
+    margin-right: 0;
+}
+.middle-1-b {
+    display: none;
+}
+.logos{
+    display: none;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer .details{
+    display: flex;
+    flex-wrap: wrap;
+}
+}
+
+@media (max-width:650px){
+   
+    .Destinations .container{
+        flex-basis: 100%;
+        margin-bottom: 30px;
+        
+    }
+    .middle .middle-1 .middle-2{
+       flex-basis: 50%;
+
+    }
 }
