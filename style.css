@@ -8,12 +8,8 @@ html, body{
     height: 100%;
     background-color:  #ffffff;
 }
-/* .main{
-    display: flex;
-    flex-direction: column;
-} */
 
-header{
+nav{
     height: 80px;
     
     display: flex;
@@ -42,14 +38,11 @@ nav ul li a{
     color: rgb(2, 1, 1);
     text-decoration: none;
     font-size: 18px;
-    /* font-weight: 500; */
     letter-spacing: 1px;
-    /* padding: 8px 10px; */
     border-radius: 5px;
 }
 .menu i{
    color: #0b0a0a;
-   /* text-align: left; */
    margin-left: 50px;
    font-size: 32px;
    cursor: pointer;
@@ -73,15 +66,12 @@ nav ul li a{
     width: 50%;
 }
 .img{
-    /* position: relative; */
     width: 100%;
 }
 .hero-left{
-    /* padding-left: 15px; */
     margin: 40px;
     width: 50%;
     height: 500px;
-    /* background-color: rgb(168, 109, 161); */
 }
 .text .text-p{
     position: absolute;
@@ -123,7 +113,6 @@ color: #df6951;
 .btn{
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     margin-top: 370px;
     width: 60%;
 }
@@ -147,11 +136,9 @@ background: #f1a501
    width: 200px;
    height: 29px;
    border-radius: 50%;
-   /* background-color: #df6951; */
 }
 .btn p{
     width: 200px;
-    /* background-color: blueviolet; */
     margin-left: 300px;
     font-size: 24px;
 }
@@ -279,7 +266,6 @@ color: #5e6282;
 
 }
 .middle-1-b{
- /* background-color: cornflowerblue; */
        margin-left: 120px;
       margin-top: 100px;
       
@@ -311,7 +297,6 @@ color: #5e6282;
 }
 
 .middle-2{
-    /* background-color: darkkhaki; */
 width: 50%;
 height: 400px;
 }
@@ -364,7 +349,6 @@ color: #5e6282;
     width: 50%;
     height: 300px;
     align-items: left;
-    /* background-color: red; */
 }
 
 .peoples img{
@@ -404,7 +388,6 @@ height: 110px;
 font-family: "Poppins";
 font-size: 27px;
 font-weight: normal;
-/* line-height: 54px; */
 font-style: normal;
 text-align: center;
 color: #5e6282;
@@ -467,7 +450,6 @@ color: #181e4b;
     margin-left: 40px;
 }
 .brandname p{
-/* overflow: hidden; */
 margin-left: 40px;
 font-family: "Poppins";
 font-size: 13px;
@@ -483,8 +465,6 @@ color: #5e6282;
     height: 300px;
     display: flex;
     flex-direction: row;
-    /* text-align: center; */
-    /* padding: 10px; */
 }
 .details h3{
 
@@ -521,7 +501,6 @@ ul{
 }
 
 .outtro{
-    /* background-color: rgb(212, 185, 185); */
     width: 40%;
     
 }
@@ -529,7 +508,6 @@ ul{
     display: flex;
     justify-content: space-around;
     margin-top: 30px;
-    /* background-color: black; */
 }
 .socialmedia{
     width: 50%;
@@ -555,9 +533,6 @@ color: #5e6282;
     width: 180px;
     height: 55px;
     border-radius: 25px;
-  /* background: #121311; */
-  /* background-color: black; */
-  /* padding: 5px; */
     background-color:black;
 }
 .appstore span{
@@ -582,7 +557,6 @@ margin-left: 55px;
 font-family: "Gilroy-ExtraBold";
 font-size: 20px;
 font-weight: normal;
-/* line-height: 12px; */
 font-style: normal;
 text-align: left;
 color: #ffffff;
@@ -590,6 +564,7 @@ color: #ffffff;
 }
 .mail{
     width: 100%;
+    height: 90px;
     margin-bottom: 100px;
     text-align: center;
 }
@@ -615,20 +590,25 @@ color: #5e6282;
    nav ul{
        position: fixed;
        top: 80px;
-       left: -100%;
-       background: #111;
+       right: -100%;
+       border-radius: 30px;
+       background: rgb(232, 223, 223);
        height: 100vh;
-       width: 100%;
+       width: 50%;
        display: block;
        text-align: center;
        transition: all 0.3s ease;
    }
 
    #onclick:checked ~ ul{
-       left: 0%;
+       right: 0%;
+
    }
    nav ul li{
        margin: 40px 0;
+ }
+ nav ul li a{
+    font-size: 28px;
  }
 
  .hero{
